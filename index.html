@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaNuzz Stores | Ultimate Gaming Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff8c00;
+            --secondary-color: #ffcc00;
+            --bg-dark: #1a1a1d;
+            --card-bg: #2d2d30;
+            --text-main: #ffffff;
+            --text-sub: #cccccc;
+            --whatsapp-color: #25D366;
+            --youtube-color: #FF0000;
+            --header-bg: rgba(0,0,0,0.3);
+        }
+
+        .light-mode {
+            --bg-dark: #f4f4f9;
+            --card-bg: #ffffff;
+            --text-main: #1a1a1d;
+            --text-sub: #444444;
+            --header-bg: rgba(255,140,0,0.1);
+        }
+
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: var(--bg-dark); color: var(--text-main); text-align: center; line-height: 1.6; transition: 0.3s; }
+        header { padding: 20px; background: var(--header-bg); border-bottom: 2px solid var(--primary-color); }
+        h1.brand-name { font-size: 32px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin: 0; background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        #live-clock { font-size: 14px; font-weight: bold; color: var(--primary-color); margin-top: 5px; }
+
+        .menu-container { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 15px; position: relative; }
+        .menu-btn { background: var(--primary-color); color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-size: 18px; }
+        .dropdown-content { display: none; position: absolute; top: 50px; background: var(--card-bg); min-width: 200px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1000; border-radius: 10px; padding: 15px; border: 1px solid var(--primary-color); }
+        .dropdown-content.show { display: block; }
+        .dropdown-item { margin-bottom: 15px; text-align: left; }
+
+        .page-section { display: none; padding: 30px 15px; max-width: 500px; margin: auto; animation: fadeIn 0.5s ease; }
+        .active-section { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        h2 { font-size: 28px; font-weight: 700; margin-bottom: 10px; color: var(--secondary-color); }
+        h3 { font-size: 22px; color: var(--primary-color); margin-top: 20px; }
+        p { font-size: 17px; color: var(--text-sub); margin-bottom: 25px; }
+
+        .main-btn { display: block; width: 100%; padding: 18px; margin: 20px 0; background: linear-gradient(45deg, #ff4e00, #ff8c00); border: none; border-radius: 12px; color: white; font-weight: 800; font-size: 18px; text-transform: uppercase; cursor: pointer; text-decoration: none; }
+        .product-card { background: var(--card-bg); padding: 25px; border-radius: 20px; margin-bottom: 25px; border: 1px solid #444; text-align: left; position: relative; overflow: hidden; }
+        .product-card::before { content: ''; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--primary-color); }
+        .vip-card { border: 2px solid var(--secondary-color); }
+        .vip-card::before { background: var(--secondary-color); }
+
+        .price-tag { font-size: 24px; font-weight: 800; display: block; margin-top: 15px; }
+        .buy-now-btn { width: 100%; background: #28a745; color: #ffffff !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); padding: 12px; border: none; border-radius: 8px; font-weight: bold; font-size: 16px; margin-top: 15px; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; }
+
+        .features-list { padding-left: 20px; color: var(--text-sub); font-size: 15px; }
+        .features-list li { margin-bottom: 8px; }
+
+        .device-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 30px; }
+        .device-box { background: var(--card-bg); padding: 15px; border-radius: 15px; cursor: pointer; border: 1px solid #555; }
+        .device-icon { font-size: 35px; margin-bottom: 10px; display: block; }
+
+        .back-link { color: var(--primary-color); text-decoration: none; font-weight: bold; cursor: pointer; display: inline-block; margin-bottom: 20px; }
+
+        .social-container { margin-top: 30px; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+        .social-link { display: flex; align-items: center; justify-content: center; gap: 10px; width: 85%; padding: 14px; border-radius: 12px; text-decoration: none; color: #ffffff !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); font-weight: 700; font-size: 16px; }
+        .ws-btn { background-color: var(--whatsapp-color); }
+        .yt-btn { background-color: var(--youtube-color); }
+
+        .panel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+        .day-btn { padding: 10px; border-radius: 8px; font-weight: bold; color: white !important; text-shadow: 1px 1px 2px black; cursor: pointer; border: none; width: 100%; margin-bottom: 10px; text-align: center; display: block; transition: 0.3s; position: relative; }
+        .green-btn { background: #28a745; }
+        .yellow-btn { background: #ffcc00; }
+        .video-box { width: 100%; height: 120px; background: #000; border-radius: 8px; overflow: hidden; }
+        .esign-btn { background: #ff0000; color: white !important; font-weight: bold; padding: 15px; border-radius: 10px; display: block; margin-top: 20px; text-decoration: none; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); }
+        
+        .most-selling-tag { position: absolute; top: -8px; right: -5px; background: #ff0000; color: white; font-size: 8px; padding: 2px 5px; border-radius: 4px; border: 1px solid white; font-weight: 800; }
+
+        .goog-te-gadget-simple { background-color: transparent !important; border: 1px solid #777 !important; padding: 5px !important; border-radius: 5px !important; }
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="brand-name">JaNuzz Stores</h1>
+        <div id="live-clock">Loading...</div>
+    </header>
+
+    <div id="home-page" class="page-section active-section">
+        <div class="menu-container">
+            <h2>Welcome, Gamer!</h2>
+            <button class="menu-btn" onclick="toggleDropdown()"><i class="fas fa-bars"></i></button>
+            <div id="myDropdown" class="dropdown-content">
+                <div class="dropdown-item"><label style="font-size: 12px; font-weight: bold;">Change Language:</label><div id="google_translate_element"></div></div>
+                <div class="dropdown-item"><label style="font-size: 12px; font-weight: bold;">Display Mode:</label><br><button onclick="toggleMode()" style="width: 100%; padding: 8px; margin-top: 5px; cursor: pointer; border-radius: 5px; border: 1px solid var(--primary-color); background: transparent; color: var(--text-main);"><i class="fas fa-adjust"></i> Switch Mode</button></div>
+            </div>
+        </div>
+        <p>ලංකාවේ විශ්වාසවන්තම සහ වේගවත්ම Free Fire Optimization සේවාව. ඔබගේ Gameplay එක ඊළඟ මට්ටමට (Next Level) අරන් යන්න අපි සූදානම්!</p>
+        <button class="main-btn" onclick="navigateTo('opt-info-page')">🚀 OPTIMIZATION FILES</button>
+        <button class="main-btn" onclick="navigateTo('panel-device-page')" style="background: linear-gradient(45deg, #6a11cb, #2575fc);">🔥 PREMIUM PANELS</button>
+        <div class="social-container">
+            <h3>Join Community</h3>
+            <a href="https://whatsapp.com/channel/0029Vb88tOv89inhOJN8DZ1e" target="_blank" class="social-link ws-btn"><i class="fab fa-whatsapp"></i> Whatsapp Channel</a>
+            <a href="https://youtube.com/@januzzoptimizations?si=4j0QPomqq1fwOOar" target="_blank" class="social-link yt-btn"><i class="fab fa-youtube"></i> Subscribe Us On Youtube</a>
+            <p style="font-size: 14px; margin-top: 15px;">Developed by <b>Admin Januzz</b></p>
+        </div>
+    </div>
+
+    <div id="panel-device-page" class="page-section">
+        <span class="back-link" onclick="navigateTo('home-page')">← Back to Home</span>
+        <h2>Premium Panels</h2>
+        <p>ඔබගේ Device එක තෝරන්න.</p>
+        <div class="device-grid">
+            <div class="device-box" onclick="navigateTo('apple-panel-page')"><span class="device-icon"><i class="fab fa-apple"></i></span><b>Apple iOS</b></div>
+            <div class="device-box" onclick="navigateTo('android-panel-page')"><span class="device-icon" style="color: #3DDC84;"><i class="fab fa-android"></i></span><b>Android</b></div>
+            <div class="device-box" onclick="navigateTo('pc-panel-page')"><span class="device-icon" style="color: #00a2ed;"><i class="fas fa-desktop"></i></span><b>PC</b></div>
+        </div>
+        <div style="text-align: left; margin-top: 30px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px;">
+            <ul class="features-list">
+                <li>Anti-Ban 100% Trusted</li>
+                <li>මෙහි ඇති සියලුම Panels ඔබගේ ප්‍රධාන ගිණුමට සම්බන්ධ කර සෙල්ලම් කළ හැක.</li>
+                <li>24x7 Customer Care Service</li>
+                <li>ගෙවන මුදලට උපරිම සාධාරණය</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="apple-panel-page" class="page-section">
+        <span class="back-link" onclick="navigateTo('panel-device-page')">← Back to Device Select</span>
+        <h2>Apple iOS Panels</h2>
+        <div class="product-card">
+            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM FLOURITE (IOS) PANEL</h4>
+            <div class="panel-grid">
+                <div>
+                    <button class="day-btn green-btn" onclick="sendWhatsAppPanel('Flourite iOS 1 Day', '1100', true)">1 Day - 1100 LKR</button>
+                    <button class="day-btn green-btn" onclick="sendWhatsAppPanel('Flourite iOS 7 Days', '4000', true)">7 Days - 4000 LKR</button>
+                    <button class="day-btn yellow-btn" onclick="sendWhatsAppPanel('Flourite iOS 31 Days', '6800', true)">31 Days - 6800 LKR</button>
+                </div>
+                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/tKDyb4ZS51Q" frameborder="0" allowfullscreen></iframe></div>
+            </div>
+        </div>
+        <div class="product-card">
+            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM LOL V5 (IOS) PANEL</h4>
+            <div class="panel-grid">
+                <div><button class="day-btn yellow-btn" onclick="sendWhatsAppPanel('LOL V5 iOS 31 Days', '3500', true)">31 Days - 3500 LKR</button></div>
+                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/yqO7RjWtsl4" frameborder="0" allowfullscreen></iframe></div>
+            </div>
+        </div>
+        <div class="product-card">
+            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM SONIC V9 (IOS) PANEL</h4>
+            <div class="panel-grid">
+                <div><button class="day-btn yellow-btn" onclick="sendWhatsAppPanel('Sonic V9 iOS 31 Days', '4800', true)">31 Days - 4800 LKR</button></div>
+                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/DuEcO6vnLIc" frameborder="0" allowfullscreen></iframe></div>
+            </div>
+        </div>
+        <a href="javascript:void(0)" onclick="sendWhatsAppPanel('Esign iOS Key (1 Year)', '2000', false)" class="esign-btn">Esign iOS Price - LKR 2000 For 1 Year</a>
+    </div>
+
+    <div id="android-panel-page" class="page-section">
+        <span class="back-link" onclick="navigateTo('panel-device-page')">← Back to Device Select</span>
+        <h2>Android Panels</h2>
+        <div class="product-card">
+            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM DRIP CLIENT (ANDROID) PACKAGE</h4>
+            <div class="panel-grid">
+                <div>
+                    <button class="day-btn green-btn" onclick="sendWhatsAppPanel('Drip Client Android 1 Day', '600', false)">1 Day - 600 LKR</button>
+                    <button class="day-btn green-btn" onclick="sendWhatsAppPanel('Drip Client Android 7 Days', '950', false)">7 Day - 950 LKR</button>
+                    <button class="day-btn green-btn" onclick="sendWhatsAppPanel('Drip Client Android 15 Days', '1900', false)">15 Day - 1900 LKR</button>
+                    <button class="day-btn yellow-btn" onclick="sendWhatsAppPanel('Drip Client Android 31 Days', '3600', false)">31 Day - 3600 LKR</button>
+                </div>
+                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/2MBkD5snnbI" frameborder="0" allowfullscreen></iframe></div>
+            </div>
+        </div>
+        <div class="product-card">
+            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM PATO TEAM (ANDROID) PACKAGE</h4>
+            <div class="panel-grid">
+                <div>
+                    <button class="day-btn green-btn" onclick="sendWhatsAppPanel('Pato Team Android 1 Day', '600', false)">1 Day - 600 LKR</button>
+                    <button class="day-btn green-btn" onclick="sendWhatsAppPanel('Pato Team Android 15 Days', '2500', false)">15 Day - 2500 LKR</button>
+                    <button class="day-btn yellow-btn" onclick="sendWhatsAppPanel('Pato Team Android 30 Days', '4200', false)">30 Day - 4200 LKR</button>
+                </div>
+                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/QbaEeX6eLuk" frameborder="0" allowfullscreen></iframe></div>
+            </div>
+        </div>
+        <div class="product-card">
+            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM HG CHEATZ (ANDROID) PACKAGE</h4>
+            <div class="panel-grid">
+                <div>
+                    <button class="day-btn green-btn" onclick="sendWhatsAppPanel('HG Cheatz Android 1 Day', '500', false)">1 Day - 500 LKR</button>
+                    <button class="day-btn green-btn" onclick="sendWhatsAppPanel('HG Cheatz Android 10 Days', '1800', false)">10 Day - 1800 LKR</button>
+                    <button class="day-btn yellow-btn" onclick="sendWhatsAppPanel('HG Cheatz Android 30 Days', '3800', false)">30 Day - 3800 LKR</button>
+                </div>
+                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/v35-k4-Pu3M" frameborder="0" allowfullscreen></iframe></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pc-panel-page" class="page-section">
+        <span class="back-link" onclick="navigateTo('panel-device-page')">← Back to Device Select</span>
+        <h2>PC Panels</h2>
+        <div class="product-card">
+            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM PC PANEL</h4>
+            <p style="font-size: 12px; margin: 5px 0;">(Main ID Safe)</p>
+            <div class="panel-grid">
+                <div><button class="day-btn green-btn" onclick="sendWhatsAppPanel('PC Panel External 1 Year', '6000', false)">External 1 year - 6000 LKR</button></div>
+                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/3A1D3vZE6UE" frameborder="0" allowfullscreen></iframe></div>
+            </div>
+            <div class="panel-grid" style="margin-top: 15px;">
+                <div><button class="day-btn yellow-btn" onclick="sendWhatsAppPanel('PC Panel Internal 3 Months', '6000', false)">Internal 3 months - 6000 LKR<span class="most-selling-tag">MOST SELLING</span></button></div>
+                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/a07a3I7D1cQ" frameborder="0" allowfullscreen></iframe></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="opt-info-page" class="page-section">
+        <span class="back-link" onclick="navigateTo('home-page')">← Back to Home</span>
+        <h2>Why Choose Us?</h2>
+        <div style="text-align: left; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px;">
+            <p style="font-weight: bold;">💎 100% Anti-Ban High Performance Files</p>
+            <ul class="features-list"><li>Headshot Rate එක උපරිම වේ.</li><li>Recoil සහ Lag සම්පූර්ණයෙන්ම පාලනය කරයි.</li><li>Main Account එකට කිසිදු බියකින් තොරව භාවිතා කළ හැක.</li><li>Lifetime Support & 24/7 Service.</li></ul>
+        </div>
+        <h3>Select Your Device</h3>
+        <div class="device-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="device-box" onclick="navigateTo('apple-page')"><span class="device-icon"><i class="fab fa-apple"></i></span><b>Apple iOS</b></div>
+            <div class="device-box" onclick="navigateTo('android-products-page')"><span class="device-icon" style="color: #3DDC84;"><i class="fab fa-android"></i></span><b>Android</b></div>
+        </div>
+    </div>
+
+    <div id="android-products-page" class="page-section">
+        <span class="back-link" onclick="navigateTo('opt-info-page')">← Change Device</span>
+        <h2>Android Power-Ups</h2>
+        <div class="product-card"><h4 style="margin:0; color: var(--primary-color);">PREMIUM OPTIMIZATION</h4><ul class="features-list"><li>Device Full Optimize</li><li>Private Sensitive Settings</li></ul><span class="price-tag">LKR 700/-</span><a href="javascript:void(0)" onclick="sendWhatsApp('Premium Android Optimization (LKR 700)')" class="buy-now-btn">Order via WhatsApp</a></div>
+        <div class="product-card vip-card"><div style="position: absolute; top: 10px; right: 10px; background: gold; color: black; font-size: 10px; padding: 2px 8px; font-weight: bold; border-radius: 5px;">BEST SELLER</div><h4 style="margin:0; color: var(--secondary-color);">ELITE VIP BUNDLE</h4><div style="display: grid; grid-template-columns: 1fr 1fr;"><ul class="features-list"><li>Aim Stabilizer</li><li>No Recoil</li><li>Lag Fix</li></ul><ul class="features-list"><li>Sensi Booster</li><li>MacroDroid</li><li>VIP Bypass</li></ul></div><span class="price-tag">LKR 2000/-</span><a href="javascript:void(0)" onclick="sendWhatsApp('Elite VIP Android Optimization (LKR 2000)')" class="buy-now-btn" style="background: var(--secondary-color);">Get VIP Access</a></div>
+    </div>
+
+    <div id="apple-page" class="page-section">
+        <span class="back-link" onclick="navigateTo('opt-info-page')">← Change Device</span>
+        <h2>iOS Power-Ups</h2>
+        <div class="product-card"><h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM IOS ACCESS</h4><ul class="features-list"><li>DNS 3</li><li>Scriptable Docs</li><li>Shortcut</li><li>Phone Settings & Game Settings</li></ul><span class="price-tag">LKR 1700/-</span><a href="javascript:void(0)" onclick="sendWhatsApp('JaNuzz Premium Ios Access (LKR 1700)')" class="buy-now-btn">Buy Now</a></div>
+        <div class="product-card"><h4 style="margin:0; color: var(--primary-color);">JANUZZ VIP IOS ACCESS</h4><ul class="features-list"><li>DNS 4</li><li>Scriptable Docs</li><li>Shortcut</li><li>Commands</li><li>Phone Settings & Game Settings</li></ul><span class="price-tag">LKR 2500/-</span><a href="javascript:void(0)" onclick="sendWhatsApp('JaNuzz Vip Ios Access (LKR 2500)')" class="buy-now-btn">Buy Now</a></div>
+        <div class="product-card vip-card"><h4 style="margin:0; color: var(--secondary-color);">JANUZZ VVIP IOS ACCESS</h4><ul class="features-list"><li>DNS 5</li><li>Scriptable Docs</li><li>Shortcut</li><li>Commands</li><li>Vnc Config</li><li>Aim Lock DNS</li></ul><span class="price-tag">LKR 3500/-</span><a href="javascript:void(0)" onclick="sendWhatsApp('JaNuzz VVIP Ios Access (LKR 3500)')" class="buy-now-btn" style="background: var(--secondary-color);">Buy Now</a></div>
+        <div class="product-card vip-card"><h4 style="margin:0; color: var(--secondary-color);">JANUZZ ELITE VIP IOS ACCESS</h4><ul class="features-list"><li>DNS 7</li><li>Scriptable Docs</li><li>Shortcut</li><li>Commands</li><li>Vnc Config</li><li>Aim Lock DNS</li><li>Config Verbosity</li></ul><span class="price-tag">LKR 4500/-</span><a href="javascript:void(0)" onclick="sendWhatsApp('JaNuzz Elite VIP Ios Access (LKR 4500)')" class="buy-now-btn" style="background: var(--secondary-color);">Buy Now</a></div>
+    </div>
+
+    <script type="text/javascript">function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'si', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element'); }</script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function toggleDropdown() { document.getElementById("myDropdown").classList.toggle("show"); }
+        window.onclick = function(event) { if (!event.target.matches('.menu-btn') && !event.target.matches('.fa-bars')) { var d = document.getElementsByClassName("dropdown-content"); for (var i=0; i<d.length; i++) if (d[i].classList.contains('show')) d[i].classList.remove('show'); } }
+        function navigateTo(p) { document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active-section')); document.getElementById(p).classList.add('active-section'); window.scrollTo(0, 0); }
+        function sendWhatsApp(pkg) { window.open("https://wa.me/94762901453?text=" + encodeURIComponent("Hello Admin, I want to buy " + pkg + ". Please send details."), '_blank'); }
+        function sendWhatsAppPanel(pkg, price, includeEsign) { 
+            let msg = "Hello Admin, I want to buy " + pkg + " for LKR " + price + ".";
+            if(includeEsign) { msg += " (Rs. 2000 added for Esign iOS)"; }
+            window.open("https://wa.me/94762901453?text=" + encodeURIComponent(msg), '_blank'); 
+        }
+        function toggleMode() { document.body.classList.toggle('light-mode'); }
+        function updateTime() { const n = new Date(); const o = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }; document.getElementById('live-clock').innerText = n.toLocaleString('en-US', o); }
+        setInterval(updateTime, 1000); updateTime();
+    </script>
+</body>
+</html>
+ 
