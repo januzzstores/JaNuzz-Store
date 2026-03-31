@@ -74,7 +74,7 @@
         .green-btn { background: #28a745; }
         .yellow-btn { background: #ffcc00; }
         .video-box { width: 100%; height: 120px; background: #000; border-radius: 8px; overflow: hidden; }
-        .esign-btn { background: #ff0000; color: white !important; font-weight: bold; padding: 15px; border-radius: 10px; display: block; margin-top: 20px; text-decoration: none; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); }
+        .esign-btn { background: #ff0000; color: white !important; font-weight: bold; padding: 15px; border-radius: 10px; display: block; margin-top: 20px; text-decoration: none; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); text-align: center; }
         
         .most-selling-tag { position: absolute; top: -8px; right: -5px; background: #ff0000; color: white; font-size: 8px; padding: 2px 5px; border-radius: 4px; border: 1px solid white; font-weight: 800; }
 
@@ -82,9 +82,7 @@
         .payment-box { background: var(--card-bg); border: 2px solid #555; border-radius: 15px; padding: 20px; text-align: left; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
         .bank-logo { height: 25px; vertical-align: middle; margin-bottom: 5px; border-radius: 4px; }
         .bank-title { font-weight: 800; font-size: 18px; color: var(--secondary-color); margin-bottom: 10px; display: block; }
-        .resell-banner { background: #ffcc00; color: black; font-weight: 800; padding: 10px; border-radius: 10px; margin-bottom: 20px; font-size: 14px; text-transform: uppercase; }
 
-        /* Google Translate Styles */
         .goog-te-gadget-simple { background-color: transparent !important; border: 1px solid #777 !important; padding: 5px !important; border-radius: 5px !important; }
         .goog-te-banner-frame.skiptranslate { display: none !important; }
         body { top: 0px !important; }
@@ -99,20 +97,17 @@
 
     <div id="home-page" class="page-section active-section">
         <div class="menu-container">
-            <h2 style="white-space: nowrap;">Hello Dear Customer</h2>
+            <h2>Welcome, Gamer!</h2>
             <button class="menu-btn" onclick="toggleDropdown()"><i class="fas fa-bars"></i></button>
             <div id="myDropdown" class="dropdown-content">
-                <div class="dropdown-item"><label style="font-size: 12px; font-weight: bold;">Select Language:</label><div id="google_translate_element"></div></div>
+                <div class="dropdown-item"><label style="font-size: 12px; font-weight: bold;">Change Language:</label><div id="google_translate_element"></div></div>
                 <div class="dropdown-item"><label style="font-size: 12px; font-weight: bold;">Display Mode:</label><br><button onclick="toggleMode()" style="width: 100%; padding: 8px; margin-top: 5px; cursor: pointer; border-radius: 5px; border: 1px solid var(--primary-color); background: transparent; color: var(--text-main);"><i class="fas fa-adjust"></i> Switch Mode</button></div>
             </div>
         </div>
-        <h3 style="font-size: 24px; margin-top: -10px; margin-bottom: 15px;">Welcome To JaNuzz STORE</h3>
-        <p>ලංකාවේ විශ්වාසවන්තම සහ වේගවත්ම Free Fire Optimization සේවාව.</p>
-        
+        <p>ලංකාවේ විශ්වාසවන්තම සහ වේගවත්ම Free Fire Optimization සේවාව. ඔබගේ Gameplay එක ඊළඟ මට්ටමට (Next Level) අරන් යන්න අපි සූදානම්!</p>
         <button class="main-btn" onclick="navigateTo('opt-info-page')">🚀 OPTIMIZATION FILES</button>
         <button class="main-btn" onclick="navigateTo('panel-device-page')" style="background: linear-gradient(45deg, #6a11cb, #2575fc);">🔥 PREMIUM PANELS</button>
-        <button class="main-btn" onclick="navigateTo('payment-page')">💳 PAYMENT DETAILS</button>
-
+        <button class="main-btn" onclick="navigateTo('payment-page')" style="background: #444;">💳 VIEW PAYMENT DETAILS</button>
         <div class="social-container">
             <h3>Join Community</h3>
             <a href="https://whatsapp.com/channel/0029Vb88tOv89inhOJN8DZ1e" target="_blank" class="social-link ws-btn"><i class="fab fa-whatsapp"></i> Whatsapp Channel</a>
@@ -125,221 +120,11 @@
         <span class="back-link" id="payment-back-btn" onclick="navigateBack()">← Back to previous Page</span>
         <h2>Payment Methods</h2>
         <a href="https://whatsapp.com/channel/0029Vb8AOZaJJhzY0IVcpC30" target="_blank" class="social-link ws-btn" style="width: 100%; margin-bottom: 15px;">Join Our Proof Channel</a>
-        <p style="font-size: 15px; text-align: justify;">ඔබ අප කෙරෙහි තබා ඇති විශ්වාසය අපි ඉහලින්ම අගය කරන්නෙමු. ඔබගේ විශ්වාසය රැකීම අපගේ වගකීමයි. අප සහ අපගේ ආදරණීය ගනුදෙනුකරුවන් අතර සිදුවූ ගනුදෙනු හා සාක්ෂි සදහා ඉහත වට්සැප් චැනලය සමග සම්බන්ධ වන්න.</p>
+        <p style="font-size: 15px; text-align: justify;">ඔබ අප කෙරෙහි තබා ඇති විශ්වාසය අපි ඉහලින්ම අගය කරන්නෙමු. ගෙවීම් සිදු කිරීමෙන් පසු එහි රිසිට් පත පහත බටනය හරහා ඇඩ්මින්ට යොමු කරන්න.</p>
 
         <div class="payment-box">
             <span class="bank-title">COMMERCIAL BANK <img src="https://www.combank.lk/assets/images/logo.png" class="bank-logo"></span>
             <div style="font-size: 15px; line-height: 1.8;"><b>Account Number:</b> 8026543013<br><b>Name:</b> KARUNARATHNA M L R T<br><b>Branch:</b> Balangoda Branch</div>
         </div>
         <div class="payment-box">
-            <span class="bank-title">HNB BANK <img src="https://www.hnb.net/images/hnb-logo.png" class="bank-logo"></span>
-            <div style="font-size: 15px; line-height: 1.8;"><b>Account Number:</b> 071020306740<br><b>Name:</b> KARUNARATHNA MLRT<br><b>Branch:</b> Balangoda Branch</div>
-        </div>
-
-        <div id="extra-info-section" style="display: none;">
-             <p style="font-size: 14px; color: var(--secondary-color); margin-top: 20px;">ඔබ ගෙවීම් සිදු කල Digital Receipt Screen Shot හෝ Bank රිසිට් පත පහල Whatsapp Button එක Click කර Admin වෙත යවන්න. හෝ තවත් අමතර විස්තර සදහා ඇඩ්මින් ව සම්බන්ද කරගන්න.</p>
-             <button onclick="sendWhatsAppReceipt()" class="social-link ws-btn" style="width: 100%; font-size: 14px; color: white !important; border:none; cursor:pointer;">Send Your Receipt Or Contact Admin For More Details</button>
-        </div>
-
-        <div id="default-payment-btn">
-            <p style="font-size: 14px; color: var(--secondary-color); margin-top: 20px;">ඔබ ගෙවීම් සිදු කල Digital Receipt Screen Shot හෝ Bank රිසිට් පත පහල Whatsapp Button එක Click කර Admin වෙත යවන්න.</p>
-            <a href="https://wa.me/94762901453?text=Hello%20Admin,%20I%20have%20made%20the%20payment.%20Here%20is%20the%20receipt." target="_blank" class="social-link ws-btn" style="width: 100%;">Send Your Receipt To Admin</a>
-        </div>
-    </div>
-
-    <div id="opt-info-page" class="page-section">
-        <span class="back-link" onclick="navigateTo('home-page')">← Back to previous Page</span>
-        <h2>Why Choose Us?</h2>
-        <div style="text-align: left; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px;">
-            <p style="font-weight: bold;">💎 100% Anti-Ban High Performance Files</p>
-            <ul class="features-list"><li>Headshot Rate එක උපරිම වේ.</li><li>Recoil සහ Lag පාලනය කරයි.</li><li>Main Account එකට භාවිතා කළ හැක.</li></ul>
-        </div>
-        <h3>Select Your Device</h3>
-        <div class="device-grid" style="grid-template-columns: 1fr 1fr;">
-            <div class="device-box" onclick="navigateTo('apple-page')"><span class="device-icon"><i class="fab fa-apple"></i></span><b>Apple iOS</b></div>
-            <div class="device-box" onclick="navigateTo('android-products-page')"><span class="device-icon" style="color: #3DDC84;"><i class="fab fa-android"></i></span><b>Android</b></div>
-        </div>
-    </div>
-
-    <div id="apple-page" class="page-section">
-        <span class="back-link" onclick="navigateTo('opt-info-page')">← Change Device</span>
-        <div class="resell-banner">I'm Reselling These Optimizations & Panels</div>
-        <h2>iOS Power-Ups</h2>
-        <div class="product-card vip-card">
-            <h4 style="margin:0; color: var(--secondary-color);">JaNuzz x 11D Premium Optimization Package</h4>
-            <ul class="features-list"><li>Scriptable docs</li><li>Phone Sensi</li><li>VNC Config</li><li>Shortcut</li><li>AIM LOCK DNS</li><li>Game Settings</li><li>Commands</li><li>Verbosity Config</li></ul>
-            <span class="price-tag">LKR 1800/-</span>
-            <button onclick="goToPayment('apple-page', 'JaNuzz x 11D Premium Optimization (iOS)', '1800 LKR')" class="buy-now-btn" style="background: var(--secondary-color); color: black !important;">Buy Now</button>
-        </div>
-        <div class="product-card vip-card">
-            <h4 style="margin:0; color: var(--secondary-color);">JaNuzz x TDM BENA Premium Optimization Package</h4>
-            <ul class="features-list"><li>Regedit</li><li>Configs</li><li>Game Smooth Profile</li><li>All Device Settings & Sensitives</li></ul>
-            <span class="price-tag">LKR 2100/-</span>
-            <button onclick="goToPayment('apple-page', 'JaNuzz x TDM BENA Premium Optimization (iOS)', '2100 LKR')" class="buy-now-btn" style="background: var(--secondary-color); color: black !important;">Buy Now</button>
-        </div>
-    </div>
-
-    <div id="android-products-page" class="page-section">
-        <span class="back-link" onclick="navigateTo('opt-info-page')">← Change Device</span>
-        <h2>Android Power-Ups</h2>
-        <div class="product-card"><h4 style="margin:0; color: var(--primary-color);">PREMIUM OPTIMIZATION</h4><ul class="features-list"><li>Device Full Optimize</li><li>Private Sensitive Settings</li></ul><span class="price-tag">LKR 700/-</span><button onclick="goToPayment('android-products-page', 'Android Premium Optimization', '700 LKR')" class="buy-now-btn">Order via WhatsApp</button></div>
-        <div class="product-card vip-card"><div style="position: absolute; top: 10px; right: 10px; background: gold; color: black; font-size: 10px; padding: 2px 8px; font-weight: bold; border-radius: 5px;">BEST SELLER</div><h4 style="margin:0; color: var(--secondary-color);">ELITE VIP BUNDLE</h4><ul class="features-list"><li>Aim Stabilizer</li><li>No Recoil</li><li>Lag Fix</li><li>Sensi Booster</li></ul><span class="price-tag">LKR 2000/-</span><button onclick="goToPayment('android-products-page', 'Android Elite VIP Bundle', '2000 LKR')" class="buy-now-btn" style="background: var(--secondary-color); color: black !important;">Get VIP Access</button></div>
-    </div>
-
-    <div id="panel-device-page" class="page-section">
-        <span class="back-link" onclick="navigateTo('home-page')">← Back to previous Page</span>
-        <h2>Premium Panels</h2>
-        <div class="device-grid">
-            <div class="device-box" onclick="navigateTo('apple-panel-page')"><span class="device-icon"><i class="fab fa-apple"></i></span><b>Apple iOS</b></div>
-            <div class="device-box" onclick="navigateTo('android-panel-page')"><span class="device-icon" style="color: #3DDC84;"><i class="fab fa-android"></i></span><b>Android</b></div>
-            <div class="device-box" onclick="navigateTo('pc-panel-page')"><span class="device-icon" style="color: #00a2ed;"><i class="fas fa-desktop"></i></span><b>PC</b></div>
-        </div>
-    </div>
-
-    <div id="apple-panel-page" class="page-section">
-        <span class="back-link" onclick="navigateTo('panel-device-page')">← Back to Device Select</span>
-        <h2>Apple iOS Panels</h2>
-        <div class="product-card">
-            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM FLOURITE (IOS) PANEL</h4>
-            <div class="panel-grid">
-                <div>
-                    <button class="day-btn green-btn" onclick="goToPayment('apple-panel-page', 'JaNuzz Premium Flourite (iOS) - 1 Day', '1100 LKR')">1 Day - 1100 LKR</button>
-                    <button class="day-btn green-btn" onclick="goToPayment('apple-panel-page', 'JaNuzz Premium Flourite (iOS) - 7 Days', '4000 LKR')">7 Days - 4000 LKR</button>
-                    <button class="day-btn yellow-btn" onclick="goToPayment('apple-panel-page', 'JaNuzz Premium Flourite (iOS) - 31 Days', '6800 LKR')">31 Days - 6800 LKR</button>
-                </div>
-                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/tKDyb4ZS51Q" frameborder="0"></iframe></div>
-            </div>
-        </div>
-        <div class="product-card">
-            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM LOL V5 (IOS) PANEL</h4>
-            <div class="panel-grid">
-                <div><button class="day-btn yellow-btn" onclick="goToPayment('apple-panel-page', 'JaNuzz Premium LOL V5 (iOS) - 31 Days', '3500 LKR')">31 Days - 3500 LKR</button></div>
-                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/yqO7RjWtsl4" frameborder="0"></iframe></div>
-            </div>
-        </div>
-        <div class="product-card">
-            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM SONIC V9 (IOS) PANEL</h4>
-            <div class="panel-grid">
-                <div><button class="day-btn yellow-btn" onclick="goToPayment('apple-panel-page', 'JaNuzz Premium Sonic V9 (iOS) - 31 Days', '4800 LKR')">31 Days - 4800 LKR</button></div>
-                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/DuEcO6vnLIc" frameborder="0"></iframe></div>
-            </div>
-        </div>
-        <button onclick="goToPayment('apple-panel-page', 'Esign iOS 1 Year License', '2000 LKR')" class="esign-btn" style="border:none; width: 100%; cursor: pointer;">Esign iOS Price - LKR 2000 For 1 Year</button>
-    </div>
-
-    <div id="android-panel-page" class="page-section">
-        <span class="back-link" onclick="navigateTo('panel-device-page')">← Back to Device Select</span>
-        <h2>Android Panels</h2>
-        <div class="product-card">
-            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM DRIP CLIENT (ANDROID)</h4>
-            <div class="panel-grid">
-                <div>
-                    <button class="day-btn green-btn" onclick="goToPayment('android-panel-page', 'Drip Client (Android) - 1 Day', '600 LKR')">1 Day - 600 LKR</button>
-                    <button class="day-btn green-btn" onclick="goToPayment('android-panel-page', 'Drip Client (Android) - 7 Days', '950 LKR')">7 Day - 950 LKR</button>
-                    <button class="day-btn yellow-btn" onclick="goToPayment('android-panel-page', 'Drip Client (Android) - 31 Days', '3600 LKR')">31 Day - 3600 LKR</button>
-                </div>
-                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/2MBkD5snnbI" frameborder="0"></iframe></div>
-            </div>
-        </div>
-        <div class="product-card">
-            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM PATO TEAM (ANDROID)</h4>
-            <div class="panel-grid">
-                <div>
-                    <button class="day-btn green-btn" onclick="goToPayment('android-panel-page', 'Pato Team (Android) - 1 Day', '600 LKR')">1 Day - 600 LKR</button>
-                    <button class="day-btn yellow-btn" onclick="goToPayment('android-panel-page', 'Pato Team (Android) - 30 Days', '4200 LKR')">30 Day - 4200 LKR</button>
-                </div>
-                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/QbaEeX6eLuk" frameborder="0"></iframe></div>
-            </div>
-        </div>
-        <div class="product-card">
-            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM HG CHEATZ (ANDROID)</h4>
-            <div class="panel-grid">
-                <div>
-                    <button class="day-btn green-btn" onclick="goToPayment('android-panel-page', 'HG Cheatz (Android) - 1 Day', '600 LKR')">1 Day - 600 LKR</button>
-                    <button class="day-btn green-btn" onclick="goToPayment('android-panel-page', 'HG Cheatz (Android) - 7 Days', '1150 LKR')">7 Day - 1150 LKR</button>
-                    <button class="day-btn yellow-btn" onclick="goToPayment('android-panel-page', 'HG Cheatz (Android) - 30 Days', '3800 LKR')">30 Day - 3800 LKR</button>
-                </div>
-                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/v35-k4-Pu3M" frameborder="0"></iframe></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="pc-panel-page" class="page-section">
-        <span class="back-link" onclick="navigateTo('panel-device-page')">← Back to Device Select</span>
-        <h2>PC Panels</h2>
-        <div class="product-card">
-            <h4 style="margin:0; color: var(--primary-color);">JANUZZ PREMIUM PC PANEL</h4>
-            <div class="panel-grid">
-                <div><button class="day-btn green-btn" onclick="goToPayment('pc-panel-page', 'PC Panel External - 1 Year', '6000 LKR')">External 1 year - 6000</button></div>
-                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/3A1D3vZE6UE" frameborder="0"></iframe></div>
-            </div>
-            <div class="panel-grid" style="margin-top: 15px;">
-                <div><button class="day-btn yellow-btn" onclick="goToPayment('pc-panel-page', 'PC Panel Internal - 3 Months', '6000 LKR')">Internal 3 months - 6000<span class="most-selling-tag">MOST SELLING</span></button></div>
-                <div class="video-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/a07a3I7D1cQ" frameborder="0"></iframe></div>
-            </div>
-        </div>
-    </div>
-
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'si',
-                includedLanguages: 'en,si,hi,ta,ml,bn',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script>
-        let lastPage = 'home-page';
-        let selectedPackage = "";
-        let selectedPrice = "";
-
-        function toggleDropdown() { document.getElementById("myDropdown").classList.toggle("show"); }
-        window.onclick = function(event) { if (!event.target.matches('.menu-btn') && !event.target.matches('.fa-bars')) { var d = document.getElementsByClassName("dropdown-content"); for (var i=0; i<d.length; i++) if (d[i].classList.contains('show')) d[i].classList.remove('show'); } }
-        
-        function navigateTo(p) { 
-            lastPage = p; 
-            document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active-section')); 
-            document.getElementById(p).classList.add('active-section'); 
-            window.scrollTo(0, 0); 
-            
-            if(p === 'payment-page') {
-                document.getElementById('extra-info-section').style.display = 'none';
-                document.getElementById('default-payment-btn').style.display = 'block';
-                document.getElementById('payment-back-btn').setAttribute('onclick', "navigateTo('home-page')");
-            }
-        }
-
-        function goToPayment(fromPage, packageName, price) {
-            lastPage = fromPage; 
-            selectedPackage = packageName;
-            selectedPrice = price;
-            
-            document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active-section')); 
-            document.getElementById('payment-page').classList.add('active-section'); 
-            window.scrollTo(0, 0); 
-            
-            document.getElementById('extra-info-section').style.display = 'block';
-            document.getElementById('default-payment-btn').style.display = 'none';
-            document.getElementById('payment-back-btn').setAttribute('onclick', "navigateBack()");
-        }
-
-        function sendWhatsAppReceipt() {
-            let message = "Hello Admin, I want to send my receipt.%0A%0A--- Package Details ---%0AItem: " + selectedPackage + "%0APrice: " + selectedPrice + "%0A%0AI have made the payment. Please confirm it.";
-            window.open("https://wa.me/94762901453?text=" + message, "_blank");
-        }
-
-        function navigateBack() {
-            document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active-section')); 
-            document.getElementById(lastPage).classList.add('active-section'); 
-            window.scrollTo(0, 0);
-        }
-
-        function toggleMode() { document.body.classList.toggle('light-mode'); }
-        function updateTime() { const n = new Date(); const o = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }; document.getElementById('live-clock').innerText = n.toLocaleString('en-US', o); }
-        setInterval(updateTime, 1000); updateTime();
-    </script>
-</body>
-</html>
+            <span class="bank-title">HNB BANK <img src="
